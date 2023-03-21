@@ -20,7 +20,7 @@ fun WheelDatePicker(
     minDate: LocalDate = LocalDate.MIN,
     maxDate: LocalDate = LocalDate.MAX,
     yearsRange: IntRange? = IntRange(1922, 2122),
-    size: DpSize = DpSize(256.dp, 128.dp),
+    size: DpSize = DpSize(500.dp, 128.dp),
     rowCount: Int = 3,
     textStyle: TextStyle = MaterialTheme.typography.titleMedium,
     textColor: Color = LocalContentColor.current,

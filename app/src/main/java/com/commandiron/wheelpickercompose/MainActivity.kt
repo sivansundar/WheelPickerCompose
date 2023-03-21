@@ -1,6 +1,7 @@
 package com.commandiron.wheelpickercompose
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
@@ -36,15 +37,20 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ) {
+
                         WheelTimePicker { snappedTime ->
                             println(snappedTime)
                         }
                         WheelDatePicker { snappedDate ->
                             println(snappedDate)
+                            Log.d("snappedTime", "$snappedDate")
+
                         }
                         WheelDateTimePicker { snappedDateTime ->
                             println(snappedDateTime)
                         }
+
+
                         WheelDateTimePicker(
                             startDateTime = LocalDateTime.of(
                                 2025, 10, 20, 5, 30
